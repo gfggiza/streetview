@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <title>Streetview link viewer</title>
+</head>
+<body>
+    <br><br>
+    <div style="font-size:30px;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; text-align: center;display: block;position:relative;left:50%;transform: translateX(-50%);">
+        <h4 style="margin-bottom: 20px;">Insira abaixo seu link do street view</h4>
+        <p style="font-size: 40px;
+        margin-top: 0px!important;
+        margin-bottom: 20px;
+        font-weight: bold;">↓</p>
+    </div>
+    
+    <input  type="text" id="url" style="height: 30px;
+    display: block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 800px;">
+    <button id="send" onclick="BtnClick()" style="display: block;position:relative;left:50%;transform: translateX(-50%);margin-top:20px;background-color: rgb(36, 133, 179); padding:10px 20px;font-size:25px; border-radius: 5px;color:white;">Enviar</button>
+    <br>
+    <iframe style="display: block;position:relative;left:50%;transform: translateX(-50%); "
+    src="url" width="1000" height="600" frameborder="0" style="border:0;" allowfullscreen="" id="place-url"></iframe>
+
+
+
+    <script>
+       function BtnClick(){
+        let url = document.getElementById("url").value;
+        let el = document.getElementById("place-url");
+        el.src = url;
+        //window.open(url)
+}
+        </script>
+</body>
+</html>
